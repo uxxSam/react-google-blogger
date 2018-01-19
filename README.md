@@ -1,3 +1,3 @@
 # react-google-blogger
 
-react component
+react component that retrieves blogs from Google blogger and display with Google's Material UI
