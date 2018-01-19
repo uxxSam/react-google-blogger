@@ -3,7 +3,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import ReduxThunk from 'redux-thunk';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import App from './App';
+import BlogApp from './BlogApp';
 import reducers from '../reducers/index';
 
 class ReactGoogleBlogger extends Component {
@@ -13,7 +13,7 @@ class ReactGoogleBlogger extends Component {
     return (
       <Provider store={store}>
         <MuiThemeProvider>
-          <App />
+          <BlogApp />
         </MuiThemeProvider>
       </Provider>
     );

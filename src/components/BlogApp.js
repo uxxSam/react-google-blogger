@@ -5,7 +5,7 @@ import BloggerContainer from './BloggerContainer';
 import MenuBar from './MenuBar';
 import { fetchBlogSummary, fetchPosts, fetchNextPagePosts, fetchPrevPagePosts } from '../actions';
 
-class App extends Component {
+class BlogApp extends Component {
 
   componentWillMount() {
     this.props.fetchBlogSummary({
@@ -18,17 +18,8 @@ class App extends Component {
     });
   }
 
-  componentWillUpdate() {
-    console.log("updated!");
-  }
-
   renderMenuBar() {
-    if (this.props.currentPage >= this.props.prevPageToken.length) {
-      const nextPagetoken = this.props.postResponse.nextPageToken;
-    } else {
-      const nextPagetoken = this.props.prevPageToken[this.props.currentPage + 1];
-    }
-    return(
+    return (
       <MenuBar
         fetchNextPagePosts={this.props.fetchNextPagePosts.bind(this)}
         fetchPrevPagePosts={this.props.fetchPrevPagePosts.bind(this)}
@@ -62,7 +53,7 @@ const mapStateToProps = state => {
   const { blogResponse } = state.blog;
   const { postResponse, prevPageToken } = state.post;
   const { currentPage } = state.post;
-  var loading = state.blog.loading || state.post.loading;
+  let loading = state.blog.loading || state.post.loading;
   if (!blogResponse || !postResponse) loading = true;
 
   return { blogResponse, postResponse, loading, prevPageToken, currentPage };
@@ -73,4 +64,4 @@ export default connect(mapStateToProps, {
   fetchPosts,
   fetchNextPagePosts,
   fetchPrevPagePosts
-})(App);
+})(BlogApp);
