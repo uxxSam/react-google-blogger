@@ -1,46 +1,43 @@
 {
   "name": "react-google-blogger",
-  "version": "0.0.0",
-  "description": "react component",
-  "main": "./lib/index.js",
-  "repository": {
-    "type": "git",
-    "url": ".git"
-  },
-  "homepage": "",
-  "bugs": "/issues",
-  "directories": {
-    "example": "examples"
-  },
-  "scripts": {
-    "test": "rackt test --single-run --browsers Firefox",
-    "start": "rackt server"
-  },
-  "authors": [
-    "Bicheng Xu"
-  ],
-  "license": "MIT",
-  "devDependencies": {
-    "css-loader": "^0.28.9",
-    "eslint": "^3.7.1",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
+  "version": "0.7.0",
+  "description": "Put a description here",
+  "main": "build/index.js",
   "peerDependencies": {
-    "react": "15.0.1"
+    "react": "^15.4.0 || ^16.0.0",
+    "react-dom": "^15.4.0 || ^16.0.0"
   },
-  "tags": [
-    ""
-  ],
-  "keywords": [
-    ""
-  ],
   "dependencies": {
     "axios": "^0.17.1",
+    "babel-eslint": "^8.2.1",
     "eslint-rallycoding": "^1.2.0",
     "material-ui": "^0.20.0",
+    "react-prism": "^4.3.2",
     "react-redux": "^5.0.6",
+    "react-render-html": "^0.6.0",
     "redux": "^3.7.2",
-    "redux-thunk": "^2.2.0"
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.10.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
+  },
+  "author": {
+    "name": "Bicheng Xu"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1"
   }
 }
