@@ -2,7 +2,7 @@
 Responsive React google blogger client build with Material UI for SPA
 
 ### Demo
-[Click here fore demo](
+[Click here for demo](https://react-google-blogger-demo.herokuapp.com/)
 
 ### To install
 `npm install react-google-blogger`
